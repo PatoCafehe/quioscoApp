@@ -21,8 +21,8 @@ const ModalProducto = () => {
   }, [producto, pedido]);
 
   return (
-    <div className="md:flex gap-10">
-      <div className="md:w-1/3">
+    <div className=" sm:flex md:flex gap-10">
+      <div className="sm: w-2/4 md:w-1/3">
         <Image
           width={300}
           height={400}
@@ -30,7 +30,7 @@ const ModalProducto = () => {
           src={`/assets/img/${producto.imagen}.jpg`}
         />
       </div>
-      <div className="md:w-2/3">
+      <div className=" sm: w-4/4 md:w-2/3">
         <div className="flex justify-end">
           <button onClick={handleChangeModal}>
             <svg
@@ -102,7 +102,7 @@ const ModalProducto = () => {
         </div>
         <button
           type="button"
-          className="bg-indigo-600 hover:bg-indigo-800 px-5 py-2 mt-5 font-black uppercase text-white rounded-md"
+          className=" bg-indigo-600 hover:bg-indigo-800 px-5 py-2 mt-5 font-black uppercase text-white rounded-md"
           onClick={() => handleAgregarPedido({ ...producto, cantidad })}
         >
           {edicion ? 'Guardar Cambios' : 'Añadir al Pedido'}
